@@ -9,7 +9,7 @@ export class ClockComponent implements OnInit {
   time: Date;
   intervalId;
   @Input() format: string = "HH:mm:ss";
-  @Output() tick: EventEmitter<void> = new EventEmitter<void>();
+  @Output() tick: EventEmitter<string> = new EventEmitter<string>();
 
   constructor() {
     this.time = new Date();
@@ -32,6 +32,6 @@ export class ClockComponent implements OnInit {
   onTick = () => {
     this.time = new Date();
 
-    this.tick.emit();
+    this.tick.emit("XXX");
   }
 }

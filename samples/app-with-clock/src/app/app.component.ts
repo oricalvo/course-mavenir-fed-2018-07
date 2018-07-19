@@ -17,7 +17,7 @@ export class AppComponent {
     this.clockFormat = "ss";
   }
 
-  onClockTick() {
-    console.log("tick");
+  onClockTick(str) {
+    console.log("tick", str);
   }
 }
