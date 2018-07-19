@@ -7,8 +7,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   showClock: boolean = true;
+  clockFormat: string = "HH:mm";
 
   toggle() {
     this.showClock = !this.showClock;
+  }
+
+  changeFormat() {
+    this.clockFormat = "ss";
+  }
+
+  onClockTick() {
+    console.log("tick");
   }
 }

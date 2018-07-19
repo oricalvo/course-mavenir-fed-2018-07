@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-clock',
@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class ClockComponent implements OnInit {
   time: Date;
   intervalId;
+  @Input() format: string = "HH:mm:ss";
+  @Output() tick: EventEmitter<void> = new EventEmitter<void>();
 
   constructor() {
     this.time = new Date();
@@ -15,10 +17,9 @@ export class ClockComponent implements OnInit {
 
   ngOnInit() {
     console.log("clock.ngOnInit");
+    console.log("format", this.format);
 
-    this.intervalId = setInterval(() => {
-      this.time = new Date();
-    }, 1000);
+    this.intervalId = setInterval(this.onTick, 1000);
   }
 
   ngOnDestroy() {
@@ -26,5 +27,11 @@ export class ClockComponent implements OnInit {
 
     clearInterval(this.intervalId);
     this.intervalId = undefined;
+  }
+
+  onTick = () => {
+    this.time = new Date();
+
+    this.tick.emit();
   }
 }

@@ -1,5 +1,7 @@
 <h1>Use Child Component</h1>
 
 <button (click)="toggle()">Toggle</button>
+<button (click)="changeFormat()">Change Format</button>
 
-<app-clock *ngIf="showClock"></app-clock>
+<app-clock [format]="clockFormat" *ngIf="showClock" (tick)="onClockTick()"></app-clock>
+
