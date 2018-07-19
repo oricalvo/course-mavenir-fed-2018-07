@@ -1,0 +1,9 @@
+<div>
+  <input [(ngModel)]="name">
+  <button (click)="add()">Add</button>
+</div>
+
+<app-contact-list
+  [contacts]="contacts"
+  (contactDelete)="remove($event)"></app-contact-list>
+
