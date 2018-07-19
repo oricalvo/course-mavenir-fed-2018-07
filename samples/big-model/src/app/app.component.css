@@ -1,0 +1,16 @@
+:host {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+app-group-list {
+  width: 15em;
+  flex-shrink: 0;
+}
+
+app-contact-list {
+  width: 100%;
+  background-color: red;
+}
+

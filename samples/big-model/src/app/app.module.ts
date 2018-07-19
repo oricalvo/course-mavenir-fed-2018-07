@@ -2,12 +2,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { ClockComponent } from './clock/clock.component';
+import { GroupListComponent } from './group-list/group-list.component';
+import { ContactListComponent } from './contact-list/contact-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ClockComponent,
+    GroupListComponent,
+    ContactListComponent
   ],
   imports: [
     BrowserModule
