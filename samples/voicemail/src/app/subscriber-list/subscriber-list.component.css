@@ -1,0 +1,20 @@
+li {
+  display: flex;
+  flex-direction: row;
+  padding: 0.5em;
+  border-bottom: 1px solid lightgray;
+}
+
+li.selected {
+  background-color: blue;
+  color: white;
+}
+
+.id {
+  width: 1.5em;
+}
+
+.name {
+  width: 5em
+}
+

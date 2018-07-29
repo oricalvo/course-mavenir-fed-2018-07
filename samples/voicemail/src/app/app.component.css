@@ -1,0 +1,22 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+app-subscriber-list {
+  height: 50%;
+}
+
+app-subscriber-details {
+  height: 50%;
+}
+
+.header {
+  background-color: black;
+  color: white;
+  padding: 0.5em;
+}
+
+
+

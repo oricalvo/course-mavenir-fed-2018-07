@@ -1,0 +1,9 @@
+<ul>
+  <li *ngFor="let sub of subs"
+      (click)="select(sub)"
+      [ngClass]="{selected: isSubSelected(sub)}">
+    <span class="id">{{sub.id}}</span>
+    <span class="name">{{sub.name}}</span>
+    <span class="email">{{sub.email}}</span>
+  </li>
+</ul>

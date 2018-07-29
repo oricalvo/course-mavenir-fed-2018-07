@@ -1,0 +1,14 @@
+:host {
+  display: block;
+  padding: 1em;
+}
+
+.field {
+  margin-bottom: 1em;
+}
+
+.label {
+  color: green;
+  font-weight: bold;
+  padding-right: 1em;
+}
