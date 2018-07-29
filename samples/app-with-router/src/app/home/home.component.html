@@ -1,0 +1,7 @@
+<h2>Home</h2>
+
+<ul>
+  <li *ngFor="let contact of contacts" (click)="gotoDetails(contact)">
+    <span>{{contact.name}}</span>
+  </li>
+</ul>

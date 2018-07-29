@@ -1,0 +1,17 @@
+.board {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.cell {
+  width: 7em;
+  height: 7em;
+  background-color: red;
+  margin-right: 0.25em;
+  margin-bottom: 0.25em;
+}

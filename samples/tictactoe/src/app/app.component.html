@@ -1,0 +1,9 @@
+<h1>Tic Tac Toe</h1>
+
+<div class="board">
+  <div class="row" *ngFor="let row of rows">
+    <div class="cell" *ngFor="let cell of row">
+      <span>{{cell.value}}</span>
+    </div>
+  </div>
+</div>
